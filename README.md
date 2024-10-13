@@ -29,9 +29,9 @@
 
 ## 👥 개발자
 
-- **coke05288(coke05288@gmail.com)** : 풀스택 개발(Spring, Thymeleaf)
-- **legitkarl9** : 
-- **ponyo00** : 
+- **coke05288(coke05288@gmail.com)** : 웹 서비스 개발(Spring Boot, Thymeleaf)
+- **ponyo00(1000yums@gmail.com)** : 이미지 리사이징 구현(AWS Lambda, Python) 
 - **hizju(satusna@gmail.com)** :
+- **legitkarl9** : 
 
 <br>
