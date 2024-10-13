@@ -32,5 +32,6 @@
 - **coke05288(coke05288@gmail.com)** : 풀스택 개발(Spring, Thymeleaf)
 - **legitkarl9** : 
 - **ponyo00** : 
+- **hizju(satusna@gmail.com)** :
 
 <br>

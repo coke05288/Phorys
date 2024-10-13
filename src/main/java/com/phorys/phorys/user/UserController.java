@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class UserController {
 
     @GetMapping("/login")
-    @ResponseBody
     public String login(){
-        return "<h1>로그아웃 상태</h1>";    }
+        return "login_form";
+    }
 
 }
