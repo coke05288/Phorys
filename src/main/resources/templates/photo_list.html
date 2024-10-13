@@ -1,0 +1,34 @@
+<html layout:decorate="~{layout}" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns="http://www.w3.org/1999/xhtml">
+<div layout:fragment="content" class="d-flex">
+    <nav th:if="${#authentication.authenticated}" class="navbar navbar-light bg-light border-right d-flex flex-column vh-100" style="width: 250px;">
+        <div class="container-fluid d-flex flex-column">
+            <a class="navbar-brand my-3" href="/">Phorys</a>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" th:href="@{/user/logout}">로그아웃</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" th:href="@{/user/profile}">프로필</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="max-width: 800px; margin: auto;">
+        <div class="row">
+            <div class="col-12 mb-4" th:each="photo : ${photos}">
+                <div class="card">
+                    <img th:src="@{${photo.url}}" class="card-img-top" alt="photo">
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${photo.title}">사진 제목</h5>
+                        <p class="card-text" th:text="${photo.description}">사진 설명</p>
+                        <p class="card-text"><small class="text-muted" th:text="${photo.user.username}">사용자</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</html>
