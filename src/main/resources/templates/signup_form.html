@@ -1,0 +1,39 @@
+<html layout:decorate="~{layout}" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns="http://www.w3.org/1999/xhtml">
+<div layout:fragment="content" class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;">
+    <!-- 메인 카드 -->
+    <div class="card" style="width: 400px; padding: 30px; box-shadow: 0 2px 18px rgba(0.5, 0.5, 0, 0.2);">
+        <h2 class="text-center mb-4" style="font-family: 'Cursive';">Phorys</h2>
+        <p class="text-center">당신만의 소중한 추억을 보관하기 위해 <br>회원가입을 진행해주세요.</p>
+
+        <a th:href="@{/user/kakao-login}" class="btn btn-block">
+            <img src="/img/kakao_login_large_wide.png" alt="카카오 로그인" style="width: 100%; max-width: 400px;">
+        </a>
+
+        <div class="text-center my-3">
+            <span class="mx-2">OR</span>
+            <div class="my-4" style="border-bottom: 1px solid #ccc;"></div>
+        </div>
+
+        <form th:action="@{/user/signup}" method="post">
+            <div class="mb-3">
+                <input type="text" name="email" id="email" class="form-control" placeholder="이메일 주소를 입력해주세요" required>
+            </div>
+            <div class="mb-3">
+                <input type="password" name="password" id="password" class="form-control" placeholder="비밀번호를 입력해주세요" required>
+            </div>
+            <div class="my-3">
+                <input type="text" name="username" id="username" class="form-control" placeholder="닉네임을 입력해주세요" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100" style="background-color: #0095F6;">회원가입</button>
+        </form>
+    </div>
+
+    <div class="card text-center mt-3" style="width: 400px; box-shadow: 0 2px 18px rgba(0.5, 0.5, 0, 0.2);">
+        <div class="card-body">
+            <span>이미 계정이 있으신가요?</span>
+            <a href="/user/login" class="text-primary text-decoration-none">로그인</a>
+        </div>
+    </div>
+</div>
+</html>
